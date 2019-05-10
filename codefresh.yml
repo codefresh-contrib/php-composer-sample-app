@@ -1,0 +1,15 @@
+version: '1.0'
+steps:
+  main_clone:
+    title: Cloning main repository...
+    type: git-clone
+    repo: 'codefresh-contrib/php-composer-sample-app'
+    revision: master
+    git: github
+  MyAppDockerImage:
+    title: Building Docker Image
+    type: build
+    image_name: my-php-image
+    working_directory: ./
+    tag: master
+    dockerfile: Dockerfile
