@@ -1,4 +1,4 @@
-FROM composer/composer:php7 as vendor
+FROM composer:1.9.3 as vendor
 
 
 WORKDIR /tmp/
